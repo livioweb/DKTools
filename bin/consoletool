@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php // @codingStandardsIgnoreFile
+use Symfony\Component\Console\Application;
+$serviceManager = include __DIR__ . '/../app/bootstrap.php';
+
+/**
+ * @var Application $console
+ */
+$console = $serviceManager->get("LRL\Console");
+$console->run();

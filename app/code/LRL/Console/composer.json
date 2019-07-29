@@ -1,0 +1,22 @@
+{
+    "name": "livioweb/console-tool-console",
+    "type": "console-tool-module",
+    "authors": [
+        {
+            "name": "Livio Rodrigues Lopes",
+            "email": "liviorodrigueslopes@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^3.4",
+        "dwendrich/console-config-resolver": "^0.2.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "LRL\\Console\\" : ""
+        }
+    }
+}
