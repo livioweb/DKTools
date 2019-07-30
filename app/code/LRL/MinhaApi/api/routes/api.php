@@ -27,4 +27,5 @@ $routes->add('produto', new Routing\Route('/produto/{id}', array(
 return $routes;
 
 //https://symfony.com/doc/current/create_framework/routing.html
-//http://localhost:8008/produto/12vim .gitignore f
+//http://localhost:8008/produto/12
+//https://symfony.com/doc/current/routing.html
