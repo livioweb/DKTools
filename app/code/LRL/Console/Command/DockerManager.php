@@ -37,10 +37,10 @@ class DockerManager extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
 
-        $text = 'Hi '.$input->getArgument('name');
+        $text = $input->getArgument('name');
         $oi = $input->getOption('yell');
 
-        var_dump($oi);die;
+        var_dump($text);die;
 
         $output->writeln($text.'!');
 
