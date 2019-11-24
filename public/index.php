@@ -2,7 +2,8 @@
 use Symfony\Component\Routing;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-
+echo include __DIR__ . '/../app/bootstrap.php';
+die;
 $serviceManager = include __DIR__ . '/../app/bootstrap.php';
 
 function render_template($request)

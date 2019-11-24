@@ -17,8 +17,10 @@ if (file_exists($a = __DIR__ . '/../../../autoload.php')) {
 
 // Modules Settings
 $modulesConfig = Factory::fromFiles(glob('app/code/*/*/etc/*.*'), true);
+//var_dump($modulesConfig);
 // Global Settings
-$globalConfig = Factory::fromFiles(glob('/home/anakin/Documents/kaosteck/DKTools/app/etc/*.*'), true);
+$globalConfig = Factory::fromFiles(glob('app/etc/*.*'), true);
+//var_dump($modulesConfig);
 $configMerged = $modulesConfig->merge($globalConfig)->toArray();
 $serviceManager = new ServiceManager();
 $serviceManager->configure($configMerged['dependencies']);
