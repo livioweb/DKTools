@@ -13,11 +13,12 @@ if (file_exists($a = __DIR__ . '/../../../autoload.php')) {
     fwrite(STDERR, 'Cannot locate autoloader; please run "composer install"' . PHP_EOL);
     exit(1);
 }
+
+#TODO = Precisa ser refatorado
 $pwd = shell_exec("pwd");
 list($path1,$path2,$path3,$path4,$path5) = explode("/",$pwd,5);
-//echo $path5="public"; 
-if(trim($path5)=="public"){
 
+if(trim($path5)=="public"){
     // Modules Settings
 $modulesConfig = Factory::fromFiles(glob('/var/www/html/app/code/*/*/etc/*.*'), true);
 $globalConfig =Factory::fromFiles(glob('/var/www/html/app/etc/*.*'), true);
@@ -28,6 +29,7 @@ $modulesConfig = Factory::fromFiles(glob('app/code/*/*/etc/*.*'), true);
 $globalConfig =Factory::fromFiles(glob('app/etc/*.*'), true);
 
 }
+#TODO = Precisa ser refatorado /
 
 // // Modules Settings
 // $modulesConfig = Factory::fromFiles(glob($pwd.'app/code/*/*/etc/*.*'), true);
